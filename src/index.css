@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    scroll-behavior: smooth;
+}
+
+/* Hide number input controls */
+.no-spinner::-webkit-inner-spin-button,
+.no-spinner::-webkit-outer-spin-button {
+    @apply appearance-none;
+}
+
+.no-spinner {
+    -moz-appearance: textfield;
+}
+
+.active {
+    @apply text-sky-600 font-bold
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.35;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 0.35;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.slide-down {
+    animation: slideDown 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.slide-up {
+    animation: slideUp 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fade-in {
+    animation: fadeIn 0.2s;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s;
+}
