@@ -54,12 +54,12 @@ function App() {
 
 
   return <QueryClientProvider client={query}>
-    <CartContextProvider>
-      <UserContextProvider>
+    <UserContextProvider>
+      <CartContextProvider>
         <RouterProvider router={routers}></RouterProvider>
         <Toaster />
-      </UserContextProvider>
-    </CartContextProvider>
+      </CartContextProvider>
+    </UserContextProvider>
   </QueryClientProvider>
 
 }

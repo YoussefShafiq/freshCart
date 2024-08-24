@@ -1,6 +1,7 @@
 import axios from "axios";
 import { createContext, useContext, useEffect, useState } from "react";
 import toast from "react-hot-toast";
+import { UserContext } from "./userContext";
 
 
 export let CartContext = createContext()
@@ -9,6 +10,7 @@ export default function CartContextProvider({ children }) {
 
 
     const [cartItems, setCartItems] = useState(null)
+    let { userData } = useContext(UserContext)
 
     let headers = {
         token: localStorage.getItem('userToken')
@@ -90,10 +92,8 @@ export default function CartContextProvider({ children }) {
     }
 
     useEffect(() => {
-        if (localStorage.getItem('userToken')) {
-            getCartItems()
-        }
-    }, [])
+        getCartItems()
+    }, userData)
 
 
     return <CartContext.Provider value={{ checkoutSession, deleteProduct, updateProduct, addToCart, getCartItems, cartItems, setCartItems }}>
