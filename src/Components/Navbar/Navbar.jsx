@@ -27,9 +27,9 @@ export default function Navbar() {
   }
 
   return <>
-    <nav className="bg-gray-200 z-50 fixed top-0 inset-x-0 md:py-2 text-center capitalize">
+    <nav className="bg-gray-200 z-50 fixed top-0 inset-x-0 md:py-2 text-center capitalize px-3 md:px-0">
       <div className="container flex justify-between items-center text-gray-500">
-        <div className="flex justify-between items-center w-full">
+        <div className="flex justify-between items-center w-full md:w-fit">
           <NavLink to="">
             <img src={logo} width={120} alt="" />
           </NavLink>

@@ -41,7 +41,7 @@ export default function Sidebar({ toggleNav, userData, cartItems, logout }) {
             </>
           )}
         </ul>
-        <button onClick={logout} className="text-red-600">Logout</button>
+        {userData && <button onClick={logout} className="text-red-600">Logout</button>}
       </div>
     </div>
 
