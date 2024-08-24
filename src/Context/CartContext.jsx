@@ -90,7 +90,9 @@ export default function CartContextProvider({ children }) {
     }
 
     useEffect(() => {
-        getCartItems()
+        if (localStorage.getItem('userToken')) {
+            getCartItems()
+        }
     }, [])
 
 

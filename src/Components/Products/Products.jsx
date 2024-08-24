@@ -25,13 +25,15 @@ export default function Products() {
 
   return <>
 
-    <input
-      type="text"
-      placeholder="Search products..."
-      value={searchTerm}
-      onChange={(e) => setSearchTerm(e.target.value)}
-      className="mb-4 p-2  w-full border border-gray-300 rounded transition-all outline-none focus:outline-sky-200 focus:outline-[4px] focus:border-transparent"
-    />
+    <div className="flex justify-center">
+      <input
+        type="text"
+        placeholder="Search products..."
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        className="mb-4 p-2 w-[90%] md:w-full border border-gray-300 rounded transition-all outline-none focus:outline-sky-200 focus:outline-[4px] focus:border-transparent"
+      />
+    </div>
 
     {!isLoading ? (
       <div className="flex flex-wrap">
