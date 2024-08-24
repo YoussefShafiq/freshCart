@@ -79,7 +79,7 @@ export default function ProductCard({ product }) {
           <Link to={`/productdetails/${product.id}`}>
             <img src={product.imageCover} className='w-full rounded-t-md' alt="" />
           </Link>
-          {addingToWishlist ? <button className='absolute z-40 right-0 m-2 text-xl'><i className='fas fa-spinner fa-spin-pulse'></i></button> : <button onClick={() => addToWishList(product.id)} className={`fa-heart absolute z-40 right-0 m-2 text-xl transition-all duration-1000 hover:duration-100 ${wished(product.id) ? 'fa-solid text-red-600' : 'fa-regular hover:text-red-500'}`}> </button>}
+          {addingToWishlist ? <button className='absolute z-20 right-0 m-2 text-xl'><i className='fas fa-spinner fa-spin-pulse'></i></button> : <button onClick={() => addToWishList(product.id)} className={`fa-heart absolute z-20 right-0 m-2 text-xl transition-all duration-1000 hover:duration-100 ${wished(product.id) ? 'fa-solid text-red-600' : 'fa-regular hover:text-red-500'}`}> </button>}
           <Link to={`/productdetails/${product.id}`}>
             <h3 className='text-sky-400'>{product.category.name}</h3>
             <h2> {product.title.split(' ').slice(0, 3).join(' ')} </h2>

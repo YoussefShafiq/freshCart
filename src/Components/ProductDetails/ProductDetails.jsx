@@ -158,7 +158,7 @@ export default function ProductDetails() {
           </div>
           <div className="flex">
             <button onClick={() => addProductToCart(product.id)} type='button' className='bg-sky-500 duration-200 w-full p-2 mt-2 rounded text-sky-50 hover:bg-sky-400'>{addingToCart ? <i className='fas fa-spinner fa-spin-pulse'></i> : 'Add To Cart'}</button>
-            {addingToWishlist ? <button className='z-40 right-0 m-2 text-xl'><i className='fas fa-spinner fa-spin-pulse'></i></button> : <button onClick={() => addToWishList(product.id)} className={`fa-heart z-40 right-0 m-2 text-xl transition-all duration-1000 hover:duration-100 ${wished(product.id) & wishedState ? 'fa-solid text-red-600' : 'fa-regular hover:text-red-500'} `}> </button>}
+            {addingToWishlist ? <button className='z-20 right-0 m-2 text-xl'><i className='fas fa-spinner fa-spin-pulse'></i></button> : <button onClick={() => addToWishList(product.id)} className={`fa-heart z-20 right-0 m-2 text-xl transition-all duration-1000 hover:duration-100 ${wished(product.id) & wishedState ? 'fa-solid text-red-600' : 'fa-regular hover:text-red-500'} `}> </button>}
 
           </div>
         </div>

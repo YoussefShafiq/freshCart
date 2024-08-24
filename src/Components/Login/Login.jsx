@@ -3,7 +3,7 @@ import style from './Login.module.css'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import axios from 'axios'
-import { Navigate, useNavigate } from 'react-router-dom'
+import { Navigate, NavLink, useNavigate } from 'react-router-dom'
 import { UserContext } from '../../Context/userContext'
 import { CartContext } from '../../Context/CartContext'
 import loginImage from '../../assets/images/Login-amico.png'
@@ -60,7 +60,8 @@ export default function Login() {
         <img src={loginImage} className='w-full' alt="" />
       </div>
       <form onSubmit={formik.handleSubmit} className='md:w-1/2  w-full p-5 m-auto py-10'>
-        <h1 className='text-3xl py-4 font-semibold'>Login</h1>
+        <h1 className='text-3xl py-4 font-semibold'><NavLink to="/login">Login</NavLink></h1>
+
         {/* email */}
         <div className="relative z-0 w-full mb-5 group">
           <input type="email" name="email" onBlur={formik.handleBlur} onChange={formik.handleChange} id="email" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  dark:border-gray-600 dark:focus:border-sky-500 focus:outline-none focus:ring-0 focus:border-sky-600 peer" placeholder=" " />
@@ -97,6 +98,10 @@ export default function Login() {
         }
       </form>
 
+
+      <div className='flex justify-center w-full mb-10  '>
+        <div >dont have account? <span className='text-sky-500 py-4 font-semibold'><NavLink to="/register">Register now</NavLink></span></div>
+      </div>
     </div>
 
 
