@@ -19,10 +19,11 @@ export default function Footer() {
         <p className='text-gray-500'>We will send you a link, open it on your phone to download the app.</p>
       </div>
       <div className='px-3'>
-        <div className="flex space-x-3 justify-center items-center my-5">
-          <input type="text" name="FooterEmail" placeholder='Email...' className='w-full h-fit py-2 rounded px-3 focus:outline-sky-200' />
-          <button className='bg-sky-500 text-sky-50 rounded hover:bg-sky-600 focus:bg-sky-700 h-fit px-2 py-2 w-52 md:w-40 text-xs md:text-base transition-all'>Share app link</button>
+        <div className="flex space-x-3 justify-center items-stretch my-5">
+          <input type="text" name="FooterEmail" placeholder='Email...' className='w-full h-full py-2 rounded px-3 focus:outline-sky-200' />
+          <button className='bg-sky-500 text-sky-50 rounded hover:bg-sky-600 focus:bg-sky-700 max-h-max px-2 py-2 w-52 md:w-40 text-xs md:text-base transition-all'>Share app link</button>
         </div>
+
         <hr />
         <div className="flex justify-between flex-col md:flex-row space-y-3 md:space-y-0 items-center my-1">
           <div className='flex space-x-2 items-center'>
