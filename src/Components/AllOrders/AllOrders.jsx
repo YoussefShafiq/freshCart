@@ -56,7 +56,7 @@ export default function AllOrders() {
                 <div>
                   ID: <span>{order.id}</span>
                 </div>
-                <div>{order.createdAt.slice(0, 10)}</div>
+                <div>{order.createdAt?.slice(0, 10)}</div>
               </div>
               <div className='p-3 '>
                 <div className='font-bold'>Order Price: <span className='font-semibold' >{order.totalOrderPrice}</span></div>
