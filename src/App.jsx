@@ -38,6 +38,7 @@ let routers = createBrowserRouter([
       { path: 'checkout', element: <ProtectedRoute><Checkout /></ProtectedRoute> },
       { path: 'allorders', element: <ProtectedRoute><AllOrders /></ProtectedRoute> },
       { path: 'brands', element: <ProtectedRoute><Brands /></ProtectedRoute> },
+      { path: 'allorders', element: <ProtectedRoute><AllOrders /></ProtectedRoute> },
       { path: 'forgetpassword', element: <ForgetPassword /> },
       { path: 'verifyresetcode', element: <VerifyResetCode /> },
       { path: 'resetpassword', element: <ResetPassword /> },

@@ -59,7 +59,7 @@ export default function WishList() {
 
   return <>
 
-    <h1 className="text-3xl">WishList <i className="fa-solid fa-heart-circle-check text-xl text-red-600"></i></h1>
+    <h1 className="text-3xl  text-center mb-4">WishList <i className="fa-solid fa-heart-circle-check text-xl text-red-600"></i></h1>
 
     {isLoading ? <Loading /> : <>
 

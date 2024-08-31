@@ -47,7 +47,7 @@ export default function Cart() {
     {cart ? <div className="relative overflow-x-auto  sm:rounded-lg md:mx-20">
       <div className="flex justify-between p-5">
         <h2 className='text-xl font-bold' >total price: <span className='text-sky-500' >{cart?.totalCartPrice} EGP</span></h2>
-        <Link to={'/checkout'} ><button type="button" class="focus:outline-none text-white bg-sky-700 hover:bg-sky-800 focus:ring-4 focus:ring-sky-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 "> Checkout </button></Link>
+        <Link to={`${cart.products?.length > 0 ? '/checkout' : '/cart'}`} ><button type="button" class={`focus:outline-none text-white bg-sky-700 hover:bg-sky-800 focus:ring-4 focus:ring-sky-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 ${cart.products?.length > 0 ? '' : 'opacity-45 hover:cursor-not-allowed'}`}> Checkout </button></Link>
       </div>
       <table className="w-full text-sm text-left rtl:text-right text-gray-500">
         <thead className="text-xs text-gray-700 uppercase bg-gray-50 ">

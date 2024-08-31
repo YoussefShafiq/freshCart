@@ -45,7 +45,7 @@ export default function Brands() {
 
   return <>
 
-    <h1 className="text-3xl">Brands</h1>
+    <h1 className="text-3xl  text-center">Brands</h1>
     <div className='flex flex-wrap justify-center p-3'>
       {isLoading ? <Loading /> : (
         <>

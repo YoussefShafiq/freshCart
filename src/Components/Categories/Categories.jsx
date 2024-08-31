@@ -36,7 +36,7 @@ export default function Categories() {
 
   return (
     <>
-      <h1 className="text-3xl">Categories</h1>
+      <h1 className="text-3xl  text-center">Categories</h1>
       <div className='flex flex-wrap justify-center'>
         {categoriesLoading ? <Loading /> : (
           <>
