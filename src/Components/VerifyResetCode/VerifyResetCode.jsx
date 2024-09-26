@@ -17,8 +17,10 @@ export default function VerifyResetCode() {
   let navigate = useNavigate()
 
   let validationSchema = Yup.object().shape({
-    resetCode: Yup.string().length(6, 'Length must be exactly 6 characters').required('Code is required')
-  })
+    resetCode: Yup.string()
+      .matches(/^\d{5,6}$/, 'Code must be 5 or 6 digits long')
+      .required('Code is required')
+  });
 
   async function verifyResetCode(values) {
     setSubmit(true)

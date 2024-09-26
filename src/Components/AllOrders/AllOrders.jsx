@@ -35,7 +35,6 @@ export default function AllOrders() {
     queryFn: getOrders
   })
 
-  console.log(data?.data[0].createdAt);
 
   function selectOrder(id) {
     setSelectedOrder(id)
